@@ -10,7 +10,7 @@ This is my journal of the design and building process of **JWST-inspired Solar G
 You can view this journal in more detail on **Hack Club Blueprint** [here](https://blueprint.hackclub.com/projects/548).
 
 
-## 10/17/2025 - (Planning, initial CAD drafts)  
+## 10/17/2025 3 PM - (Planning, initial CAD drafts)  
 
 ## Overview (9/17/2025 - 10/17/2025)
 ### Good day reader, welcome to JSG
@@ -57,4 +57,43 @@ Program (Move Panel #1 by 2deg(Pitch) and 10deg(Yaw)) -> ESP32 -> Servo driver b
 Thank you for reading, and sorry if it's so long if you have any questions
 
   
+
+## 10/17/2025 4 PM - Designing PCB and sourcing materials (Hit a crossroads.)  
+
+I wanted to start actually planning out the actual materials I will use, I live in Nigeria so I know that the grants given would translate to a higher price in naira and if I can find local parts that would be great. For the project I wanted a benchmark of about 14 - 18 hexagon panels which would require a maximum of 36 servos since 2 is for one. I first checked online and here is a screen shot of the first option I found 
+![motor price.jpg](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MjY0NSwicHVyIjoiYmxvYl9pZCJ9fQ==--7b7eb5e3c048f800d1332ae41669eb229252c673/motor%20price.jpg)
+
+10k (approx. $8) for just one is insane considering I had the grand goal of trying to get 36 (360k (approx. $288)). I did end up reaching out to the seller.
+
+After looking more, I found another listing
+![motorprice lower.jpg] (/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MjY0NiwicHVyIjoiYmxvYl9pZCJ9fQ==--366f8fb492d29f05a28d77846cec3b4d60418407/motorprice%20lower.jpg)
+
+It dropped to 5,8k (approx. $3.5) which is better than the initial.
+
+I am going to try to look for more, also reaching out to the sellers asking if I can get the 36 in bulk for the price of 3k per unit (approx. $2). 
+
+It is possible to get it for that price here but that will involve actually going there to get it which is not a problem. I'll give an update on the progress of this because it's actually the main part of the project.
+
+> For other people building if you are close to a hardware store, or electronic store which sells these parts it would be better to go there and get them instead of online. This doesn't apply for everyone though.
+
+Since I have the grand plan of using 36 there would need to be 3 individual servo driver boards.
+The [PCA9685] (https://learn.adafruit.com/16-channel-pwm-servo-driver/overview) which is the initial choice for this project has a maximum of 16channels which won't contain everything if I go for 18 panels (36 servo motors).
+
+So, I have three choices
+1. Reduce the number to just reach the upper limit of the driver boards (resulting in 16 panels -> 32 servos).
+> This would be an optimal option still keeping that scale. But there's nothing else it offers. (What if it's not optimal for future expansion (like adding a small cooling fan(s)) or for troubleshooting if a channel ever fails. I do want to see exactly how this project fares. for sterilization, distillation, even teaching purposes. I'll do my best to bring the costs to a minimum, if you have opinions, please express them.
+
+2. Keep on going (Get three servo drivers)
+> By doing my best to keep costs down. I can ensure the project works well allowing it to be used beyond this and leaving little room for failure or need to replace parts.
+
+3. Reduce the number of panels
+> I'm quite biased to this option. While it is hands down the most viable option, I really didn't take on this project to make a Starlink (just 1 panel) sized heliostat array. It's not only me doing this project by the way I have an elder brother supervising to make sure nothing goes wrong. There is also the option of other classmates coming to help out.
+
+
+Here are some links to some of these materials if you'd like to see them.
+[MG996R Servo.](https://amzn.to/47bjauh)
+[Microcontroller (ESP32 Dev Board)](https://amzn.to/42O3DiN)
+[16-Channel Servo Driver (PCA9685)](https://amzn.to/4nWZWQw)
+[Power System	6V 30A DC Power Supply](https://amzn.to/3JhdO8X)
+[Reflective Mylar Film.](https://amzn.to/3INXo84)  
 
